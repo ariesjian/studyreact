@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="751e01c7-1b29-4bd5-be7f-0509e5fab342" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1173769194">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/01-demos/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/art/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/attribute-behavior/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/dom/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/expiration/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/fiber-debugger/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/browserify/dev/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/browserify/prod/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/brunch/dev/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/brunch/prod/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/rjs/dev/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/rjs/prod/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/systemjs-builder/dev/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/systemjs-builder/prod/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/webpack-alias/dev/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/webpack-alias/prod/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/webpack/dev/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/packaging/webpack/prod/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/ssr/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/unstable-async/suspense/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/fixtures/unstable-async/time-slicing/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/create-subscription/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/eslint-plugin-react-hooks/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/events/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/jest-mock-scheduler/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/jest-react/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-art/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-cache/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-debug-tools/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-dom/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-is/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-native-renderer/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-noop-renderer/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-reconciler/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-stream/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react-test-renderer/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/react/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/scheduler/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/packages/shared/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/scripts/bench/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/scripts/eslint-rules/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/scripts/perf-counters/package.json" />
+      <path value="$PROJECT_DIR$/react-hooks/scripts/release/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/art/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/attribute-behavior/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/dom/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/expiration/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/fiber-debugger/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/browserify/dev/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/browserify/prod/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/brunch/dev/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/brunch/prod/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/rjs/dev/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/rjs/prod/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/systemjs-builder/dev/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/systemjs-builder/prod/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/webpack-alias/dev/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/webpack-alias/prod/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/webpack/dev/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/packaging/webpack/prod/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/ssr/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/unstable-async/suspense/package.json" />
+      <path value="$PROJECT_DIR$/react/fixtures/unstable-async/time-slicing/package.json" />
+      <path value="$PROJECT_DIR$/react/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/create-subscription/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/events/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/jest-react/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-art/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-cache/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-dom/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-is/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-native-renderer/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-noop-renderer/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-reconciler/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react-test-renderer/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/react/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/scheduler/package.json" />
+      <path value="$PROJECT_DIR$/react/packages/shared/package.json" />
+      <path value="$PROJECT_DIR$/react/scripts/bench/package.json" />
+      <path value="$PROJECT_DIR$/react/scripts/eslint-rules/package.json" />
+      <path value="$PROJECT_DIR$/react/scripts/perf-counters/package.json" />
+      <path value="$PROJECT_DIR$/react/scripts/release/package.json" />
+      <path value="$PROJECT_DIR$/update-scheduler-demo/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="158" />
+    <option name="y" value="23" />
+    <option name="width" value="975" />
+    <option name="height" value="706" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="react-class-source-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-class-source-code" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="751e01c7-1b29-4bd5-be7f-0509e5fab342" name="Default Changelist" comment="" />
+      <created>1547882743904</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547882743904</updated>
+      <workItem from="1547882745256" duration="227000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="227000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="158" y="23" width="975" height="706" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494759" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
