@@ -34,7 +34,7 @@ import {
 } from './ReactElementValidator';
 import ReactSharedInternals from './ReactSharedInternals';
 import {enableStableConcurrentModeAPIs} from 'shared/ReactFeatureFlags';
-// 这里是所有react暴露出来的api 2019/1/22 现在真正了解的没有几个  todo
+// 这里是所有react暴露出来的api 2019/1/22 现在真正了解的没有几个  参考电子书学习:https://react.jokcy.me/ todo
 const React = {
   Children: { // 这个对象提供了一堆帮你处理props.children的方法，因为children是一个类似数组但是不是数组的数据结构，如果你要对其进行处理可以用React.Children外挂的方法
     map,
