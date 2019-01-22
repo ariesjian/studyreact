@@ -9,7 +9,7 @@ import invariant from 'shared/invariant';
 import lowPriorityWarning from 'shared/lowPriorityWarning';
 
 import ReactNoopUpdateQueue from './ReactNoopUpdateQueue';
-
+// reactBaseClasses主要有两个方法 一个是Component，另外一个是PureComponent，base class为了更新组件 ；todo 需要注意的是ReactNoopUpdateQueue，更新state的方法 2019/1/22
 const emptyObject = {};
 if (__DEV__) {
   Object.freeze(emptyObject);
@@ -17,7 +17,11 @@ if (__DEV__) {
 
 /**
  * Base class helpers for the updating state of a component.
+ *
+ * Component这个方法分别需要传递三个参数，参数，内容，还有就是更新的方法，
+ * 如果没有传递更新的方法时就采用默认的更新方法ReactNoopUpdateQueue
  */
+
 function Component(props, context, updater) {
   this.props = props;
   this.context = context;
@@ -28,7 +32,7 @@ function Component(props, context, updater) {
   this.updater = updater || ReactNoopUpdateQueue;
 }
 
-Component.prototype.isReactComponent = {};
+Component.prototype.isReactComponent = {}; // 通过原型链添加一个对象属性isReactComponent，现在不知道是干什么的 todo
 
 /**
  * Sets a subset of the state. Always use this to mutate
@@ -55,6 +59,7 @@ Component.prototype.isReactComponent = {};
  * @final
  * @protected
  */
+// Component的理解 当传入state的值是函数，对象，或者是null的时候都会更新队列的状态
 Component.prototype.setState = function(partialState, callback) {
   invariant(
     typeof partialState === 'object' ||
@@ -88,6 +93,8 @@ Component.prototype.forceUpdate = function(callback) {
  * Deprecated APIs. These APIs used to exist on classic React classes but since
  * we would like to deprecate them, we're not going to move them over to this
  * modern base class. Instead, we define a getter that warns if it's accessed.
+ *
+ * 这个是已经废弃的api
  */
 if (__DEV__) {
   const deprecatedAPIs = {
@@ -121,12 +128,16 @@ if (__DEV__) {
     }
   }
 }
-
+// 虚拟组件
 function ComponentDummy() {}
 ComponentDummy.prototype = Component.prototype;
 
 /**
  * Convenience component with default shallow equality check for sCU.
+ * PureComponent避免了一些原型方法的多余操作 PureComponent比Component的原型上多了个标识
+ * 是否需要更新isPureReactComponent
+ *
+ * 下面的代码不是很理解 todo
  */
 function PureComponent(props, context, updater) {
   this.props = props;
@@ -139,7 +150,10 @@ function PureComponent(props, context, updater) {
 const pureComponentPrototype = (PureComponent.prototype = new ComponentDummy());
 pureComponentPrototype.constructor = PureComponent;
 // Avoid an extra prototype jump for these methods.
+// Object.assign合并对象，并且后面一个的覆盖前面一个相同的属性 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+
 Object.assign(pureComponentPrototype, Component.prototype);
-pureComponentPrototype.isPureReactComponent = true;
+pureComponentPrototype.isPureReactComponent = true; // 是否需要更新
 
 export {Component, PureComponent};
+// React中对比一个ClassComponent是否需要更新，只有两个地方。一是看有没有shouldComponentUpdate方法，二就是这里的isPureReactComponent是否是true
