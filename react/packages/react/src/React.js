@@ -50,8 +50,8 @@ const React = {
 
   createContext, // todo 写个例子试试
   forwardRef, // forwardRef是用来解决HOC组件传递ref的问题的 todo
-  lazy,
-  memo,
+  lazy, // todo
+  memo, // todo
 
   Fragment: REACT_FRAGMENT_TYPE,
   StrictMode: REACT_STRICT_MODE_TYPE,
