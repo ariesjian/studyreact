@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="751e01c7-1b29-4bd5-be7f-0509e5fab342" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/packages/react/src/React.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/packages/react/src/React.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,13 +31,11 @@
           <file leaf-file-name="ReactBaseClasses.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/react/packages/react/src/ReactBaseClasses.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="568">
-                  <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
+                <state relative-caret-position="4500">
+                  <caret line="158" column="35" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#190#231#0" expanded="true" />
-                    <element signature="e#2110#2453#0" />
-                    <element signature="e#3327#4237#0" />
                   </folding>
                 </state>
               </provider>
@@ -47,8 +44,8 @@
           <file leaf-file-name="React.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/react/packages/react/src/React.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+                <state relative-caret-position="224">
+                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#190#237#0" expanded="true" />
@@ -60,11 +57,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="ReactBaseClasses.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/react/packages/react/src/ReactBaseClasses.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6029">
+                <state relative-caret-position="224">
                   <caret line="142" column="14" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="23" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -251,7 +248,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,16 +274,16 @@
       <updated>1547882743904</updated>
       <workItem from="1547882745256" duration="227000" />
       <workItem from="1548033663666" duration="5154000" />
-      <workItem from="1548123894593" duration="3860000" />
+      <workItem from="1548123894593" duration="5135000" />
+      <workItem from="1548232759491" duration="715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9241000" />
+    <option name="totallyTimeSpent" value="11231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16122234" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -295,7 +292,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22464558" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5736096" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -314,6 +311,28 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/react/packages/react/src/React.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#190#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/packages/react/src/ReactBaseClasses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4500">
+          <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#190#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react/packages/react/src/ReactBaseClasses.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -321,8 +340,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#190#231#0" expanded="true" />
-            <element signature="e#2110#2453#0" />
-            <element signature="e#3327#4237#0" />
           </folding>
         </state>
       </provider>
@@ -339,30 +356,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react/packages/react/src/ReactNoopUpdateQueue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-59" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react/packages/react/src/ReactBaseClasses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
+        <state relative-caret-position="4500">
+          <caret line="158" column="35" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#190#231#0" expanded="true" />
-            <element signature="e#2110#2453#0" />
-            <element signature="e#3327#4237#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react/packages/react/src/React.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+        <state relative-caret-position="224">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#190#237#0" expanded="true" />
