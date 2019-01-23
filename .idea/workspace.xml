@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751e01c7-1b29-4bd5-be7f-0509e5fab342" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/react/packages/react/src/React.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/packages/react/src/React.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/react/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,7 +41,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="React.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="React.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/react/packages/react/src/React.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="314">
@@ -51,6 +51,22 @@
                     <element signature="e#190#237#0" expanded="true" />
                   </folding>
                 </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/react/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README-react.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/react/README-react.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1350" />
               </provider>
             </entry>
           </file>
@@ -95,6 +111,7 @@
       <list>
         <option value="$PROJECT_DIR$/react/packages/react/src/ReactBaseClasses.js" />
         <option value="$PROJECT_DIR$/react/packages/react/src/React.js" />
+        <option value="$PROJECT_DIR$/react/README.md" />
       </list>
     </option>
   </component>
@@ -275,16 +292,15 @@
       <workItem from="1547882745256" duration="227000" />
       <workItem from="1548033663666" duration="5154000" />
       <workItem from="1548123894593" duration="5135000" />
-      <workItem from="1548232759491" duration="863000" />
+      <workItem from="1548232759491" duration="1341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11379000" />
+    <option name="totallyTimeSpent" value="11857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16122234" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -380,6 +396,18 @@
             <element signature="e#190#237#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/README-react.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1350" />
       </provider>
     </entry>
   </component>
