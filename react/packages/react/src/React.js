@@ -44,6 +44,7 @@ const React = {
     only,
   },
 
+
   createRef,// 新的ref用法，React即将抛弃<div ref="myDiv" />这种string ref的用法，将来你只能使用两种方式来使用ref
   Component, // 检查组件是否需要更新
   PureComponent,// 检查组件是否需要更新
