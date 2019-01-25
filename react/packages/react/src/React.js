@@ -43,8 +43,6 @@ const React = {
     toArray,
     only,
   },
-
-
   createRef,// 新的ref用法，React即将抛弃<div ref="myDiv" />这种string ref的用法，将来你只能使用两种方式来使用ref
   Component, // 检查组件是否需要更新
   PureComponent,// 检查组件是否需要更新
@@ -57,12 +55,12 @@ const React = {
   Fragment: REACT_FRAGMENT_TYPE,
   StrictMode: REACT_STRICT_MODE_TYPE,
   Suspense: REACT_SUSPENSE_TYPE,
-/*
-* ReactElement通过createElement创建，调用该方法需要传入三个参数：
-type 类型字符串或者变量
-config 组件或者标签的属性 class,id,data-id，等等
-children 内容 或者是子集 可以去babel上面子集试试就知道了
-* */
+  /*
+  * ReactElement通过createElement创建，调用该方法需要传入三个参数：
+  type 类型字符串或者变量
+  config 组件或者标签的属性 class,id,data-id，等等
+  children 内容 或者是子集 可以去babel上面子集试试就知道了
+  * */
   createElement: __DEV__ ? createElementWithValidation : createElement, // 创建ReactElement
   cloneElement: __DEV__ ? cloneElementWithValidation : cloneElement, // 克隆ReactElement
   createFactory: __DEV__ ? createFactoryWithValidation : createFactory, // 创建ReactElement工厂 todo
