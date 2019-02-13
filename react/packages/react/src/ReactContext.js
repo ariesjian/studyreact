@@ -13,7 +13,13 @@ import type {ReactContext} from 'shared/ReactTypes';
 
 import warningWithoutStack from 'shared/warningWithoutStack';
 import warning from 'shared/warning';
-
+/*
+* context的两种方式
+* 1，childContextType  已经被废弃了
+*
+* 2,createContext   看例子
+*
+* */
 export function createContext<T>(
   defaultValue: T,
   calculateChangedBits: ?(a: T, b: T) => number,
