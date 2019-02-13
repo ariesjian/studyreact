@@ -5,7 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  * @flow
  */
-
+/*
+* 这个可以参考demo的ref的例子
+* */
 import type {RefObject} from 'shared/ReactTypes';
 
 // an immutable object with a single mutable value

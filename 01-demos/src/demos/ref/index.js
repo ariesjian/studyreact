@@ -18,7 +18,12 @@ export default class RefDemo extends React.Component {
       this.objRef.current.textContent = 'obj ref got'
     }, 1000)
   }
-
+/*
+*   ref的三种使用方法  已经废弃的方法
+*   一：stringRef :下面的第一行的例子 <p ref="stringRef">span1</p>
+*   二：function : 第二行例子
+*   三：createRef:第三行例子 constructor（）{}
+* */
   render() {
     return (
       <>

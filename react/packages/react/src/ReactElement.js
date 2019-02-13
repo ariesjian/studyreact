@@ -13,7 +13,7 @@ import ReactCurrentOwner from './ReactCurrentOwner';
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
-const RESERVED_PROPS = {
+const RESERVED_PROPS = { // 内建的props
   key: true,
   ref: true,
   __self: true,
@@ -111,15 +111,15 @@ function defineRefPropWarningGetter(props, displayName) {
 const ReactElement = function(type, key, ref, self, source, owner, props) {
   const element = {
     // This tag allows us to uniquely identify this as a React Element
-    $$typeof: REACT_ELEMENT_TYPE,
+    $$typeof: REACT_ELEMENT_TYPE,// 用来标识ReactElement的类型，大部分都是REACT_ELEMENT_TYPE类型，
 
-    // Built-in properties that belong on the element
+    // Built-in properties that belong on the element 属于元素的内置属性
     type: type,
     key: key,
     ref: ref,
     props: props,
 
-    // Record the component responsible for creating this element.
+    // Record the component responsible for creating this element. 记录负责创建此元素的组件。
     _owner: owner,
   };
 
@@ -168,6 +168,15 @@ const ReactElement = function(type, key, ref, self, source, owner, props) {
  * Create and return a new ReactElement of the given type.
  * See https://reactjs.org/docs/react-api.html#createelement
  */
+
+/*
+* 需要传递三个参数;
+* 第一个是类型 可以是变量 也可以是字符串，不可以为空
+* 第二个是属性配置，是个对象，键值对的形式，当然不传递的话就是空，可以为空
+* 第三个是子元素，可以为空，可以是字符串，也可以是element节点
+*
+* */
+
 export function createElement(type, config, children) {
   let propName;
 
@@ -179,6 +188,9 @@ export function createElement(type, config, children) {
   let self = null;
   let source = null;
 
+  /*
+  * 找到合理的key和ref
+  * */
   if (config != null) {
     if (hasValidRef(config)) {
       ref = config.ref;
@@ -202,6 +214,10 @@ export function createElement(type, config, children) {
 
   // Children can be more than one argument, and those are transferred onto
   // the newly allocated props object.
+  /*
+  * 读取createElement的参数，因为它的参数在第二个之后都是节点的内容节点，
+  * 所以这里要处理一下，将所有的孩子节点放到children，以数组的形式
+  * */
   const childrenLength = arguments.length - 2;
   if (childrenLength === 1) {
     props.children = children;
@@ -218,7 +234,7 @@ export function createElement(type, config, children) {
     props.children = childArray;
   }
 
-  // Resolve default props
+  // Resolve default props 解析默认属性
   if (type && type.defaultProps) {
     const defaultProps = type.defaultProps;
     for (propName in defaultProps) {
@@ -241,6 +257,7 @@ export function createElement(type, config, children) {
       }
     }
   }
+  // 将上面处理过的属性，参数，放到ReactElement里面 返回出去
   return ReactElement(
     type,
     key,
