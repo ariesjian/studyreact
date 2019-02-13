@@ -111,6 +111,7 @@ function defineRefPropWarningGetter(props, displayName) {
 const ReactElement = function(type, key, ref, self, source, owner, props) {
   const element = {
     // This tag allows us to uniquely identify this as a React Element
+    // 注意 通过react.createElement创建的所有节点的$$typeof都是REACT_FORWARD_REF_TYPE
     $$typeof: REACT_ELEMENT_TYPE,// 用来标识ReactElement的类型，大部分都是REACT_ELEMENT_TYPE类型，
 
     // Built-in properties that belong on the element 属于元素的内置属性
