@@ -7,7 +7,7 @@ class Parent extends React.Component {
   state = {
     childContext: '123',
     newContext: '456',
-  }
+  };
 
   getChildContext() {
     return { value: this.state.childContext, a: 'aaaaa' }
