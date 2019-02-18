@@ -14,7 +14,8 @@ import {
   REACT_SUSPENSE_TYPE,
 } from 'shared/ReactSymbols';
 
-//  ConcurrentMode（REACT_CONCURRENT_MODE_TYPE）只是一个symbol，只是一个标志
+// 1,suspense 只是一个symbol，只是一个标志 但是lazy就不是一个symbol了
+// 2,ConcurrentMode（REACT_CONCURRENT_MODE_TYPE）只是一个symbol，只是一个标志
 
 import {Component, PureComponent} from './ReactBaseClasses';
 import {createRef} from './ReactCreateRef';
