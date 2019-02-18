@@ -2,7 +2,10 @@ import React, { ConcurrentMode } from 'react'
 import { flushSync } from 'react-dom'
 
 import './index.css'
-
+/*
+* ConcurrentMode 低优先更新
+* flushSync  强制使用优先级高的进行更新
+* */
 class Parent extends React.Component {
   state = {
     async: true,
@@ -25,11 +28,11 @@ class Parent extends React.Component {
 
   updateNum() {
     const newNum = this.state.num === 3 ? 0 : this.state.num + 1
-    if (this.state.async) {
-      this.setState({
+    if (this.state.async) {// 如果async是true的情况下  就直接渲染更新
+      this.setState({ //  低优先级的更新是通过setState
         num: newNum,
       })
-    } else {
+    } else { // 如果async是false的情况下  提升更新的优先级 flushSync 立马执行，优先级最高
       flushSync(() => {
         this.setState({
           num: newNum,

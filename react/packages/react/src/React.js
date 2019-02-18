@@ -14,6 +14,8 @@ import {
   REACT_SUSPENSE_TYPE,
 } from 'shared/ReactSymbols';
 
+//  ConcurrentMode（REACT_CONCURRENT_MODE_TYPE）只是一个symbol，只是一个标志
+
 import {Component, PureComponent} from './ReactBaseClasses';
 import {createRef} from './ReactCreateRef';
 import {forEach, map, count, toArray, only} from './ReactChildren';
@@ -75,7 +77,7 @@ if (enableStableConcurrentModeAPIs) {
   React.ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
   React.Profiler = REACT_PROFILER_TYPE;
 } else {
-  React.unstable_ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+  React.unstable_ConcurrentMode = REACT_CONCURRENT_MODE_TYPE; // ConcurrentMode的引入部分
   React.unstable_Profiler = REACT_PROFILER_TYPE;
 }
 

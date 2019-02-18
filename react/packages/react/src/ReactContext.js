@@ -9,16 +9,18 @@
 
 import {REACT_PROVIDER_TYPE, REACT_CONTEXT_TYPE} from 'shared/ReactSymbols';
 
-import type {ReactContext} from 'shared/ReactTypes';
+import type, {ReactContext} from 'shared/ReactTypes';
 
 import warningWithoutStack from 'shared/warningWithoutStack';
 import warning from 'shared/warning';
 /*
 * context的两种方式
-* 1，childContextType  已经被废弃了
+* 1，childContextType  已经被废弃了 17以后就废弃了
 *
-* 2,createContext   看例子
+* 2,createContext   看例子 新的组件
 *
+*
+* 3，这一节没有听懂  todo
 * */
 export function createContext<T>(
   defaultValue: T,

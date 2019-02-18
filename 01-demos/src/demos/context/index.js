@@ -9,7 +9,7 @@ class Parent extends React.Component {
     newContext: '456',
   };
 
-  getChildContext() {
+  getChildContext() { // 获取Context对象
     return { value: this.state.childContext, a: 'aaaaa' }
   }
 
