@@ -76,7 +76,7 @@ function getPooledTraverseContext(
     };
   }
 }
-
+// 清空属性
 function releaseTraverseContext(traverseContext) {
   traverseContext.result = null;
   traverseContext.keyPrefix = null;
@@ -96,6 +96,9 @@ function releaseTraverseContext(traverseContext) {
  * process.
  * @return {!number} The number of children in this subtree.
  */
+/*
+*  重点,当children不是单个节点的时候的处理
+* */
 function traverseAllChildrenImpl(
   children,
   nameSoFar,
@@ -149,7 +152,7 @@ function traverseAllChildrenImpl(
     for (let i = 0; i < children.length; i++) {
       child = children[i];
       nextName = nextNamePrefix + getComponentKey(child, i);
-      subtreeCount += traverseAllChildrenImpl(
+      subtreeCount += traverseAllChildrenImpl( // 递归的过程
         child,
         nextName,
         callback,
@@ -292,7 +295,7 @@ function mapSingleChildIntoContext(bookKeeping, child, childKey) {
   if (Array.isArray(mappedChild)) {
     mapIntoWithKeyPrefixInternal(mappedChild, result, childKey, c => c);
   } else if (mappedChild != null) {
-    if (isValidElement(mappedChild)) {
+    if (isValidElement(mappedChild)) { // isValidElement判断是否是一个合理的reactElement
       mappedChild = cloneAndReplaceKey(
         mappedChild,
         // Keep both the (mapped) and old keys if they differ, just as
@@ -307,12 +310,16 @@ function mapSingleChildIntoContext(bookKeeping, child, childKey) {
     result.push(mappedChild);
   }
 }
-
+/*
+*  1,mapIntoWithKeyPrefixInternal
+*
+* */
 function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
   let escapedPrefix = '';
   if (prefix != null) {
     escapedPrefix = escapeUserProvidedKey(prefix) + '/';
   }
+  // getPooledTraverseContext 如果数组是由嵌套的 这里面就是嵌套的对象
   const traverseContext = getPooledTraverseContext(
     array,
     escapedPrefix,
@@ -320,7 +327,7 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
     context,
   );
   traverseAllChildren(children, mapSingleChildIntoContext, traverseContext);
-  releaseTraverseContext(traverseContext);
+  releaseTraverseContext(traverseContext);// 将traverseContext对象清空了，
 }
 
 /**
@@ -336,6 +343,11 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
  * @param {*} context Context for mapFunction.
  * @return {object} Object containing the ordered map of results.
  */
+/*
+*  1,流程查看 https://react.jokcy.me/book/api/react-children.html
+*  2，mapChildren将所有层级的数组，（节点嵌套）进行循环执行，返回的是一个一维数组，将嵌套数组返回成一个简单的数组
+*
+* */
 function mapChildren(children, func, context) {
   if (children == null) {
     return children;

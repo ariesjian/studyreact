@@ -1,8 +1,8 @@
 import React from 'react'
-
+// react.children的例子
 function ChildrenDemo(props) {
   console.log(props.children)
-  console.log(React.Children.map(props.children, c => [c, [c, c]]))
+  console.log(React.Children.map(props.children, c => [c, [c, c]]));// React.Children.map返回成一层数组，得到是[children1,children1,children1,children2]
   return props.children
 }
 
