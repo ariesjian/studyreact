@@ -59,6 +59,20 @@ function getPooledTraverseContext(
   mapContext,
 ) {
   if (traverseContextPool.length) {
+    /*
+    * 数组的push()： 进栈 该方法是向数组末尾添加一个或者多个元素，并返回新的数组
+    *
+    * 数组pop()方法：出栈 后进先出 pop()方法删除数组的最后一个元素，把数组的长度减1，并且返回新的数组，如果数组变为空，则该方法不改变数组，返回undefine值
+    *
+    * 数组unshift()方法： 入队 unshift()方法是向数组的开头添加一个或多个元素，并且返回新的长度数组。
+    *
+    *数组 shift()方法：出队  shift()方法和unshift()方法恰恰相反。该方法用于把数组的第一个元素从其中删除，并返回被删除的值。如果数组是空的，shift()方法将不进行任何操作，返回undefined的值。
+    *
+    *  push()方法可以在数组的末属添加一个或多个元素
+    *  shift()方法把数组中的第一个元素删除
+    *  unshift()方法可以在数组的前端添加一个或多个元素
+    *  pop()方法把数组中的最后一个元素删除
+    * */
     const traverseContext = traverseContextPool.pop();
     traverseContext.result = mapResult;
     traverseContext.keyPrefix = keyPrefix;
@@ -348,7 +362,7 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
 *  2，mapChildren将所有层级的数组，（节点嵌套）进行循环执行，返回的是一个一维数组，将嵌套数组返回成一个简单的数组
 *
 * */
-function mapChildren(children, func, context) {
+function mapChildren(children, func, context) { // mapChildren 有返回值 ；forEachChildren 没有返回值
   if (children == null) {
     return children;
   }
