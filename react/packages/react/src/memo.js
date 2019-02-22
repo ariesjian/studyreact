@@ -10,6 +10,10 @@ import {REACT_MEMO_TYPE} from 'shared/ReactSymbols';
 import isValidElementType from 'shared/isValidElementType';
 import warningWithoutStack from 'shared/warningWithoutStack';
 
+/*
+*
+* 和purComponent功能差不多  减少不必要的页面更新
+* */
 export default function memo<Props>(
   type: React$ElementType,
   compare?: (oldProps: Props, newProps: Props) => boolean,

@@ -13,7 +13,15 @@ import {
   REACT_STRICT_MODE_TYPE,
   REACT_SUSPENSE_TYPE,
 } from 'shared/ReactSymbols';
-
+/*
+* Fragment： REACT_FRAGMENT_TYPE  是一个Symbol 我们在书写<React.Fragment>11<React.Fragment/> 其实可以简写成<>11</>
+* 作用：因为react渲染的是单个节点或者是一个数组 所以每次在return返回多个节点的时候 不想写一个div  所以可以使用Fragment来包裹一下 这个节点没有任何意义 也不会生成新的节点
+* 如果写成数组的话 需要把每个兄弟节点添加key
+*
+* StrictMode： REACT_STRICT_MODE_TYPE ，对其子节点会做到对一些将要废弃的api进行提醒
+*
+*
+* */
 // 1,suspense 只是一个symbol，只是一个标志 但是lazy就不是一个symbol了
 // 2,ConcurrentMode（REACT_CONCURRENT_MODE_TYPE）只是一个symbol，只是一个标志
 
@@ -64,9 +72,9 @@ const React = {
   config 组件或者标签的属性 class,id,data-id，等等
   children 内容 或者是子集 可以去babel上面子集试试就知道了
   * */
-  createElement: __DEV__ ? createElementWithValidation : createElement, // 创建ReactElement
+  createElement: __DEV__ ? createElementWithValidation : createElement, // 创建 ReactElement
   cloneElement: __DEV__ ? cloneElementWithValidation : cloneElement, // 克隆ReactElement
-  createFactory: __DEV__ ? createFactoryWithValidation : createFactory, // 创建ReactElement工厂 todo
+  createFactory: __DEV__ ? createFactoryWithValidation : createFactory, // 创建ReactElement工厂 是对ReactElement的封装
   isValidElement: isValidElement, // 是否是一个ReactElement
 
   version: ReactVersion,
