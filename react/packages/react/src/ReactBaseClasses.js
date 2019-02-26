@@ -9,7 +9,7 @@ import invariant from 'shared/invariant';
 import lowPriorityWarning from 'shared/lowPriorityWarning';
 
 import ReactNoopUpdateQueue from './ReactNoopUpdateQueue';
-// reactBaseClasses主要有两个方法 一个是Component，另外一个是PureComponent，base class为了更新组件 ；todo 需要注意的是ReactNoopUpdateQueue，更新state的方法 2019/1/22
+// reactBaseClasses主要有两个方法 一个是Component，另外一个是PureComponent，base class为了更新组件 ； 需要注意的是ReactNoopUpdateQueue，更新state的方法
 const emptyObject = {};
 if (__DEV__) {
   Object.freeze(emptyObject);
