@@ -7,14 +7,14 @@
  * @flow
  */
 
-import type, {ReactNodeList} from 'shared/ReactTypes';
+import type {ReactNodeList} from 'shared/ReactTypes';
 // TODO: This type is shared between the reconciler and ReactDOM, but will
 // eventually be lifted out to the renderer.
-import type, {
+import type  {
   FiberRoot,
   Batch as FiberRootBatch,
 } from 'react-reconciler/src/ReactFiberRoot';
-import type, {Container} from './ReactDOMHostConfig';
+import type  {Container} from './ReactDOMHostConfig';
 
 import '../shared/checkReact';
 import './ReactDOMClientInjection';
@@ -127,7 +127,7 @@ if (__DEV__) {
 
 ReactControlledComponent.setRestoreImplementation(restoreControlledState);
 
-export type DOMContainer =|(Element & {reactRootContainer: ? Root,}) | (Document & {reactRootContainer: ? Root,});
+export type DOMContainer = | (Element & { reactRootContainer: ? Root, }) | (Document & { reactRootContainer: ? Root, });
 type Batch = FiberRootBatch & {
   render(children: ReactNodeList): Work,
   then(onComplete: () => mixed): void,
@@ -139,12 +139,12 @@ type Batch = FiberRootBatch & {
   _root: Root,
   _hasChildren: boolean,
   _children: ReactNodeList,
-  _callbacks: Array < ()=>mixed > | null,
-  _didComplete:boolean,
+  _callbacks: Array<() => mixed> | null,
+  _didComplete: boolean,
 };
 
 type
-Root = {
+  Root = {
   render(children: ReactNodeList, callback: ?() => mixed): Work,
   unmount(callback: ?() => mixed): Work,
   legacy_renderSubtreeIntoContainer(
@@ -278,17 +278,17 @@ ReactBatch.prototype._onComplete = function () {
 };
 
 type
-Work = {
+  Work = {
   then(onCommit: () => mixed): void,
   _onCommit: () => void,
-  _callbacks: Array < ()
-=>
-mixed > | null,
+  _callbacks: Array<()
+    =>
+    mixed> | null,
   _didCommit
-:
-boolean,
+    :
+    boolean,
 }
-;
+  ;
 
 function ReactWork() {
   this._callbacks = null;
@@ -478,11 +478,9 @@ function legacyCreateRootFromDOMContainer(
           !warned &&
           rootSibling.nodeType === ELEMENT_NODE &&
           (rootSibling:
-        any
-      ).
-        hasAttribute(ROOT_ATTRIBUTE_NAME)
-      )
-        {
+            any
+          ).hasAttribute(ROOT_ATTRIBUTE_NAME)
+        ) {
           warned = true;
           warningWithoutStack(
             false,
@@ -598,9 +596,8 @@ const ReactDOM: Object = {
   ): null | Element | Text {
     if (__DEV__) {
       let owner = (ReactCurrentOwner
-    .
-      current: any
-    );
+          .current: any
+      );
       if (owner !== null && owner.stateNode !== null) {
         const warnedAboutRefsInRender =
           owner.stateNode._warnedAboutRefsInRender;
@@ -619,8 +616,7 @@ const ReactDOM: Object = {
     if (componentOrElement == null) {
       return null;
     }
-    if ((componentOrElement: any).nodeType === ELEMENT_NODE)
-    {
+    if ((componentOrElement: any).nodeType === ELEMENT_NODE) {
       return (componentOrElement: any);
     }
     if (__DEV__) {
@@ -776,16 +772,15 @@ const ReactDOM: Object = {
 };
 
 type
-RootOptions = {
-  hydrate? : boolean,
+  RootOptions = {
+  hydrate?: boolean,
 };
 
 function createRoot(container: DOMContainer, options
 
-? : RootOptions
+  ?: RootOptions
 ):
-ReactRoot
-{
+  ReactRoot {
   invariant(
     isValidContainer(container),
     'unstable_createRoot(...): Target container is not a DOM element.',
