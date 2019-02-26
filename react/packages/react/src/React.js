@@ -50,22 +50,22 @@ const React = {
   Children: { // 这个对象提供了一堆帮你处理props.children的方法，因为children是一个类似数组但是不是数组的数据结构，如果你要对其进行处理可以用React.Children外挂的方法,使用的比较少
     map,// 比较难 map和forEach差不多一样，map是返回新数组，forEach返回原数组
     forEach,
-    count,
-    toArray,
-    only,
+    count,// 子节点的数量
+    toArray,// 将子节点转换成数组
+    only,// 是否只有一个子节点
   },
   createRef,// 新的ref用法，React即将抛弃<div ref="myDiv" />这种string ref的用法，将来你只能使用两种方式来使用ref
   Component, // 检查组件是否需要更新
   PureComponent,// 检查组件是否需要更新
 
-  createContext, // todo 写个例子试试
-  forwardRef, // forwardRef是用来解决HOC组件传递ref的问题的 todo
-  lazy, // todo
-  memo, // todo
+  createContext, // 改变组件内容的  可以参看例子
+  forwardRef, // forwardRef是用来解决HOC组件传递ref的问题的
+  lazy, // 可以用来做异步的
+  memo, // 和purComponent功能差不多  减少不必要的页面更新
 
-  Fragment: REACT_FRAGMENT_TYPE,
-  StrictMode: REACT_STRICT_MODE_TYPE,
-  Suspense: REACT_SUSPENSE_TYPE,
+  Fragment: REACT_FRAGMENT_TYPE,// render多个兄弟几点 包括这些兄弟几点时候可以使用这个  不用写一个div包裹了
+  StrictMode: REACT_STRICT_MODE_TYPE, // 提示哪些是将要废弃的api
+  Suspense: REACT_SUSPENSE_TYPE,// todo
   /*
   * ReactElement通过createElement创建，调用该方法需要传入三个参数：
   type 类型字符串或者变量
