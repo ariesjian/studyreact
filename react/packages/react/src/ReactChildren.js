@@ -25,13 +25,14 @@ const SUBSEPARATOR = ':';
  * @param {string} key to be escaped.
  * @return {string} the escaped key.
  */
+
 function escape(key) {
   const escapeRegex = /[=:]/g;
   const escaperLookup = {
     '=': '=0',
     ':': '=2',
   };
-  const escapedString = ('' + key).replace(escapeRegex, function(match) {
+  const escapedString = ('' + key).replace(escapeRegex, function (match) {
     return escaperLookup[match];
   });
 
@@ -43,15 +44,18 @@ function escape(key) {
  * pattern.
  */
 
-let didWarnAboutMaps = false;
+let didWarnAboutMaps = false; // 循环警告的标志
 
 const userProvidedKeyEscapeRegex = /\/+/g;
-function escapeUserProvidedKey(text) {
+
+function escapeUserProvidedKey(text) { // 用户提供的密钥转义regex
   return ('' + text).replace(userProvidedKeyEscapeRegex, '$&/');
 }
 
 const POOL_SIZE = 10;
-const traverseContextPool = [];
+const traverseContextPool = []; // 遍历上下文的池子
+
+// 将遍历后的内容处理后返回
 function getPooledTraverseContext(
   mapResult,
   keyPrefix,
@@ -90,6 +94,7 @@ function getPooledTraverseContext(
     };
   }
 }
+
 // 清空属性
 function releaseTraverseContext(traverseContext) {
   traverseContext.result = null;
@@ -110,15 +115,11 @@ function releaseTraverseContext(traverseContext) {
  * process.
  * @return {!number} The number of children in this subtree.
  */
+
 /*
 *  重点,当children不是单个节点的时候的处理
 * */
-function traverseAllChildrenImpl(
-  children,
-  nameSoFar,
-  callback,
-  traverseContext,
-) {
+function traverseAllChildrenImpl(children, nameSoFar, callback, traverseContext,) {
   const type = typeof children;
 
   if (type === 'undefined' || type === 'boolean') {
@@ -182,8 +183,8 @@ function traverseAllChildrenImpl(
           warning(
             didWarnAboutMaps,
             'Using Maps as children is unsupported and will likely yield ' +
-              'unexpected results. Convert it to a sequence/iterable of keyed ' +
-              'ReactElements instead.',
+            'unexpected results. Convert it to a sequence/iterable of keyed ' +
+            'ReactElements instead.',
           );
           didWarnAboutMaps = true;
         }
@@ -292,13 +293,16 @@ function forEachChildren(children, forEachFunc, forEachContext) {
   if (children == null) {
     return children;
   }
+  //traverseContext 变量的上下文   getPooledTraverseContext 获取合并遍历上下文
   const traverseContext = getPooledTraverseContext(
     null,
     null,
     forEachFunc,
     forEachContext,
   );
+  // 遍历所有子级
   traverseAllChildren(children, forEachSingleChild, traverseContext);
+  //releaseTraverseContext 释放遍历后的上下文
   releaseTraverseContext(traverseContext);
 }
 
@@ -315,17 +319,18 @@ function mapSingleChildIntoContext(bookKeeping, child, childKey) {
         // Keep both the (mapped) and old keys if they differ, just as
         // traverseAllChildren used to do for objects as children
         keyPrefix +
-          (mappedChild.key && (!child || child.key !== mappedChild.key)
-            ? escapeUserProvidedKey(mappedChild.key) + '/'
-            : '') +
-          childKey,
+        (mappedChild.key && (!child || child.key !== mappedChild.key)
+          ? escapeUserProvidedKey(mappedChild.key) + '/'
+          : '') +
+        childKey,
       );
     }
     result.push(mappedChild);
   }
 }
+
 /*
-*  1,mapIntoWithKeyPrefixInternal
+*  1,mapIntoWithKeyPrefixInternal 映射到键前缀内部
 *
 * */
 function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
@@ -357,6 +362,7 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
  * @param {*} context Context for mapFunction.
  * @return {object} Object containing the ordered map of results.
  */
+
 /*
 *  1,流程查看 https://react.jokcy.me/book/api/react-children.html
 *  2，mapChildren将所有层级的数组，（节点嵌套）进行循环执行，返回的是一个一维数组，将嵌套数组返回成一个简单的数组
@@ -367,6 +373,7 @@ function mapChildren(children, func, context) { // mapChildren 有返回值 ；f
     return children;
   }
   const result = [];
+  // mapIntoWithKeyPrefixInternal 使用键前缀内部映射到
   mapIntoWithKeyPrefixInternal(children, result, null, func, context);
   return result;
 }
@@ -381,6 +388,7 @@ function mapChildren(children, func, context) { // mapChildren 有返回值 ；f
  * @return {number} The number of children.
  */
 function countChildren(children) {
+  // traverseAllChildren 遍历所有子级
   return traverseAllChildren(children, () => null, null);
 }
 
@@ -390,6 +398,7 @@ function countChildren(children) {
  *
  * See https://reactjs.org/docs/react-api.html#reactchildrentoarray
  */
+//  将所有的孩子节点转换成数组 注意这个方法mapIntoWithKeyPrefixInternal及其传递的参数
 function toArray(children) {
   const result = [];
   mapIntoWithKeyPrefixInternal(children, result, null, child => child);
@@ -410,14 +419,18 @@ function toArray(children) {
  * @return {ReactElement} The first and only `ReactElement` contained in the
  * structure.
  */
+
+// 是否只有一个孩子
 function onlyChild(children) {
+  // invariant 不变量
   invariant(
-    isValidElement(children),
+    isValidElement(children), // 合法节点判断
     'React.Children.only expected to receive a single React element child.',
   );
   return children;
 }
 
+//  这个文件夹的作用是  返回children 的一些方法  注意 这里面的循环的方法  是将嵌套的子节点一层层拆分成一级的数组
 export {
   forEachChildren as forEach,
   mapChildren as map,
