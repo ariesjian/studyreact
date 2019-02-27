@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @flow
+ * @flow  flow静态类型检查工具
  */
 
 import type {ReactNodeList} from 'shared/ReactTypes';
@@ -589,9 +589,10 @@ function createPortal(
   return ReactPortal.createPortal(children, container, null, key);
 }
 
+// 这里是ReactDOM这个对象所包含的所有东西
 const ReactDOM: Object = {
-  createPortal,
-  findDOMNode(
+  createPortal,     //  createPortal 创建门户
+  findDOMNode(     // findDOMNode  查找节点
     componentOrElement: Element | ?React$Component<any, any>,
   ): null | Element | Text {
     if (__DEV__) {
@@ -628,6 +629,7 @@ const ReactDOM: Object = {
     return DOMRenderer.findHostInstance(componentOrElement);
   },
 
+  // hydrate ?? todo  不知道做什么的
   hydrate(element: React$Node, container: DOMContainer, callback: ?Function) {
     // TODO: throw or warn if we couldn't hydrate?
     return legacyRenderSubtreeIntoContainer(
