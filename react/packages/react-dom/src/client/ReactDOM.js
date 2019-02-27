@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @flow  flow静态类型检查工具
+ * @flow  flow静态类型检查工具  https://react.docschina.org/docs/static-type-checking.html
  */
 
 import type {ReactNodeList} from 'shared/ReactTypes';
@@ -249,7 +249,7 @@ ReactBatch.prototype.commit = function () {
 
   // Synchronously flush all the work up to this batch's expiration time.
   this._defer = false;
-  DOMRenderer.flushRoot(internalRoot, expirationTime);
+  .flushRoot(internalRoot, expirationTime);
 
   // Pop the batch from the list.
   const next = this._next;
@@ -509,6 +509,7 @@ function legacyCreateRootFromDOMContainer(
   return new ReactRoot(container, isConcurrent, shouldHydrate);
 }
 
+//todo  ?不知道具体做什么的  感觉像是把子节点处理下放到容器里面  但是为什么要这样做 不理解
 function legacyRenderSubtreeIntoContainer(
   parentComponent: ?React$Component<any, any>,
   children: ReactNodeList,
@@ -629,7 +630,7 @@ const ReactDOM: Object = {
     return DOMRenderer.findHostInstance(componentOrElement);
   },
 
-  // hydrate ?? todo  不知道做什么的
+  // hydrate 类似于render() 使用方法 ReactDOM.hydrate(element, container[, callback])
   hydrate(element: React$Node, container: DOMContainer, callback: ?Function) {
     // TODO: throw or warn if we couldn't hydrate?
     return legacyRenderSubtreeIntoContainer(
