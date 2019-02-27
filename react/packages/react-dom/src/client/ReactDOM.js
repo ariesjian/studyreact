@@ -7,6 +7,18 @@
  * @flow  flow静态类型检查工具  https://react.docschina.org/docs/static-type-checking.html
  */
 
+/*
+*
+* react 创建更新的方式有   ReactDOM.render或者是ReactDOM.hydrate
+*
+* react 改变值的方式  setState  和forceUpdate
+*
+* ReactDOM.render需要做哪几步呢？
+* 一：先穿件ReactRoot 包含整个react的最顶点的一个对象
+* 二：创建FiberRoot和RootFiber：这两个对象很（很重要）
+* 三：创建更新： ReactDOM.render或者是ReactDOM.hydrate
+*
+* */
 import type {ReactNodeList} from 'shared/ReactTypes';
 // TODO: This type is shared between the reconciler and ReactDOM, but will
 // eventually be lifted out to the renderer.
@@ -529,9 +541,34 @@ function legacyRenderSubtreeIntoContainer(
 
   // TODO: Without `any` type, Flow says "Property cannot be accessed on any
   // member of intersection type." Whyyyyyy.
+  /*
+  * 第一次进来的时候这个root是不存在的
+  * */
   let root: Root = (container._reactRootContainer: any);
-  if (!root) {
+  if (root) {
+    if (typeof callback === 'function') {
+      const originalCallback = callback;
+      callback = function () {
+        const instance = DOMRenderer.getPublicRootInstance(root._internalRoot);
+        originalCallback.call(instance);
+      };
+    }
+    // Update
+    if (parentComponent != null) {
+      root.legacy_renderSubtreeIntoContainer(
+        parentComponent,
+        children,
+        callback,
+      );
+    } else {
+      root.render(children, callback);
+    }
+  } else {
     // Initial mount
+    /*
+    * 创建一个reactRoot方法 调用这个legacyCreateRootFromDOMContainer
+    * */
+
     root = container._reactRootContainer = legacyCreateRootFromDOMContainer(
       container,
       forceHydrate,
@@ -555,24 +592,6 @@ function legacyRenderSubtreeIntoContainer(
         root.render(children, callback);
       }
     });
-  } else {
-    if (typeof callback === 'function') {
-      const originalCallback = callback;
-      callback = function () {
-        const instance = DOMRenderer.getPublicRootInstance(root._internalRoot);
-        originalCallback.call(instance);
-      };
-    }
-    // Update
-    if (parentComponent != null) {
-      root.legacy_renderSubtreeIntoContainer(
-        parentComponent,
-        children,
-        callback,
-      );
-    } else {
-      root.render(children, callback);
-    }
   }
   return DOMRenderer.getPublicRootInstance(root._internalRoot);
 }
